@@ -1,7 +1,45 @@
+/* stylevan.css */
+.container
+{
+  display: flex;
+  flex-direction: row ;
+  justify-content: space-between;
+  margin: 10%;
+  border:  solid black 10 px;
+}
 .busje {
-  height: 0%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%; 
+  margin: auto;
+  display:  block;
+  size: 80%;
+}
+
+.normal {
+  border: solid black 2px;
+ 
+}
+.grayscale 
+{
+
+}
+.sepia 
+{
+
+}
+.hue 
+{
+  
+}
+.blur 
+{
+ 
+}
+
+@media all and (max-width: px) {
+  .h1 {order: 1}
+  .busje {order:2}
+  .normal {order:3}
+  .grayscale {order: 3}
+  .sepia {order: 3}
+  .hue {order: 3}
+  .blur {order: 3}
 }
