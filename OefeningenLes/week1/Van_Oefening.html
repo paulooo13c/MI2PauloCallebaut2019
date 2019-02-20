@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Busje</title>
   <link rel="stylesheet" type="text/css" href="stylevan.css">
 </head>
@@ -10,14 +11,20 @@
 <body>
   <img id="Busje" src="van.jpg" alt="foto Busje" class="busje">
   <div class="container">
-    <button onclick="normalButton()" class="normal">normal</button>
-    <button onclick="grayscaleButton()" class="grayscale">grayscale</button>
-    <button onclick="sepiaButton()" class="sepia">sepia</button>
-    <button onclick="hueButton()" class="hue">hue</button>
-    <button onclick="blurButton()" class="blur">blur</button>
+    <button onclick="normalButton()" class="normal">NORMAL</button>
+    <button onclick="grayscaleButton()" class="grayscale">GRAYSCALE</button>
+    <button onclick="sepiaButton()" class="sepia">SEPIA</button>
+    <button onclick="hueButton()" class="hue">HUE</button>
+    <button onclick="blurButton()" class="blur">BLUR</button>
   </div>
-
+  <p>Opacity: </p>
+  <div class="slidecontainer">
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+  </div>
+  <!-- De buttons doen hun werk adhv van onclick events.  -->
   <script>
+    "use strict";
+
     function normalButton() {
       document.getElementById("Busje").style.filter = "grayscale(0%)", "sepia(0%)", "blur(0px)"
     }
