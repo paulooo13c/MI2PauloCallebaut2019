@@ -2,20 +2,46 @@
 <html>
 
 <head>
-  <meta charset = "utf-8">
+  <meta charset="utf-8">
   <title>Busje</title>
   <link rel="stylesheet" type="text/css" href="stylevan.css">
 </head>
 
 <body>
-  <img src="van.jpg" alt="foto Busje" class="busje">
-  <div class="container"></div>
-  <button class="normal">normal</button>
-  <button class="grayscale">grayscale</button>
-  <button class="sepia">sepia</button>
-  <button class="hue">hue</button>
-  <button class="blur">blur</button>
+  <img id="Busje" src="van.jpg" alt="foto Busje" class="busje">
+  <div class="container">
+    <button onclick="normalButton()" class="normal">normal</button>
+    <button onclick="grayscaleButton()" class="grayscale">grayscale</button>
+    <button onclick="sepiaButton()" class="sepia">sepia</button>
+    <button onclick="hueButton()" class="hue">hue</button>
+    <button onclick="blurButton()" class="blur">blur</button>
   </div>
+
+  <script>
+    function normalButton() {
+      document.getElementById("Busje").style.filter = "grayscale(0%)", "sepia(0%)", "blur(0px)"
+    }
+
+    function grayscaleButton() {
+      document.getElementById("Busje").style.filter = "grayscale(100%)";
+    }
+
+    function grayscaleButton() {
+      document.getElementById("Busje").style.filter = "grayscale(100%)";
+    }
+
+    function sepiaButton() {
+      document.getElementById("Busje").style.filter = "sepia(100%)"
+    }
+
+    function hueButton() {
+      document.getElementById("Busje").style.filter = "hue-rotate(90deg)"
+    }
+
+    function blurButton() {
+      document.getElementById("Busje").style.filter = "blur(5px)"
+    }
+  </script>
 </body>
 
 </html>
