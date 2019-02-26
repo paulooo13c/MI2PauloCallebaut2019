@@ -30,18 +30,19 @@ button:hover {
   color: black;
 }
 
-.slidecontainer{
+.slidecontainer {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
   height: 5vh;
-  border: solid black 2px;
+  /* border: solid black 2px; */
 }
 
-.slider{
+.slider {
   margin-left: 35%;
   margin-right: auto;
   width: 40%;
+  outline: none;
 }
 
 /* .normal {
@@ -64,32 +65,36 @@ button:hover {
  
 } */
 
-@media all and (max-width: px) {
-  .h1 {
-    order: 1
-  }
-
+@media all and (max-width: 500px) {
   .busje {
-    order: 2
+    height: 30vh;
+    width: 75vw;
   }
 
-  .normal {
-    order: 3
+  .container {
+    width: 100%;
+  }
+
+  button {
+    text-align: center;
+    size: 20%;
+    font-size: 9px;
+    display: block;
   }
 
   .grayscale {
-    order: 3
+    font-size: 9px;
+    width: 20%;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .container {
+    width: 90%;
+
   }
 
-  .sepia {
-    order: 3
-  }
-
-  .hue {
-    order: 3
-  }
-
-  .blur {
-    order: 3
+  button {
+    width: 12%;
   }
 }

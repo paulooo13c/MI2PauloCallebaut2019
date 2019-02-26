@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Busje</title>
   <link rel="stylesheet" type="text/css" href="stylevan.css">
 </head>
@@ -17,38 +18,13 @@
     <button onclick="hueButton()" class="hue">HUE</button>
     <button onclick="blurButton()" class="blur">BLUR</button>
   </div>
-  <p>Opacity: </p>
   <div class="slidecontainer">
-    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+<label for="opacity-slider">opacity</label>
+    <input type="range" min="1" max="100" value="50" step="1" class="slider" id="opacity-slider"> 
+    <output for="opacity-slider" id="slider-value">100</output>
   </div>
   <!-- De buttons doen hun werk adhv van onclick events.  -->
-  <script>
-    "use strict";
-
-    function normalButton() {
-      document.getElementById("Busje").style.filter = "grayscale(0%)", "sepia(0%)", "blur(0px)"
-    }
-
-    function grayscaleButton() {
-      document.getElementById("Busje").style.filter = "grayscale(100%)";
-    }
-
-    function grayscaleButton() {
-      document.getElementById("Busje").style.filter = "grayscale(100%)";
-    }
-
-    function sepiaButton() {
-      document.getElementById("Busje").style.filter = "sepia(100%)"
-    }
-
-    function hueButton() {
-      document.getElementById("Busje").style.filter = "hue-rotate(90deg)"
-    }
-
-    function blurButton() {
-      document.getElementById("Busje").style.filter = "blur(5px)"
-    }
-  </script>
+  <script src="Busje.js"></script>
 </body>
 
 </html>
