@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<title>Vakantie Album</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" id="css-font-roboto-css"  href="fonts/roboto/webfont.css?ver=4.9.9" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+	<header class="page__header container">
+		<div class="header__logo">
+			<a href="https://intern.ikdoeict.be/"><h1>vakantie-album.be</h1></a>
+			<p>jouw favoriete foto's</p>
+		</div>	
+		<a class="button button--full" href="#" id="btnLogin">login</a>
+		<div id="loginmodal">
+			<h2 class="modal__title">Inloggen</h2>
+			<form id="login__form">
+				<p>
+					<label for="inpUname">email</label>
+					<input type="email" required id="inpUname" class="forminput forminput--light" placeholder="b.v. sebastiaan.tempels@student.odisee.be">
+					<span class="formerror" id="errUname"></span>
+				</p>
+				<p>
+					<label for="inpPass">paswoord</label>
+					<input type="password" required id="inpPass" class="forminput forminput--light" placeholder="b.v. Azerty123">
+					<span class="formerror" id="errPass"></span>
+				</p>
+				<p>
+					<input type="submit" id="btnSubmit" class="button button--full" value="log in">
+					<input type="submit" id="btnCancel" class="button button--light" value="annuleer">
+				</p>
+			</form>
+		</div>
+	</header>
+	<div class="page__filters">
+		<div class="container">
+			<form class="filters__form">
+				<div class="filters__group">
+					<p>
+						<button id="btnReset">herstel filters</button>						
+					</p>
+					<p>
+						<select id="selAlbum" class="forminput forminput--full">
+							<option value="-1">alle albums</option>
+							<option value="1">Jordanië (2018)</option>
+							<option value="2">Marokko (2018)</option>
+							<option value="3">Iran (2016)</option>
+							<option value="4">Thailand (2017)</option>
+							<option value="5">Oman (2016)</option>
+							<option value="6">Finland (2018)</option>
+							<option value="7">Algerije (2017)</option>
+						</select>
+					</p>
+					<p class="filters__years">
+						<label>2016 <input type="checkbox" value="2016"></label>	
+						<label>2017 <input type="checkbox" value="2017"></label>	
+						<label>2018 <input type="checkbox" value="2018"></label>
+					</p>
+				</div>
+				<div class="filters__group">
+					<p>
+						<label><input type="text" id="inpSearch" placeholder="zoek op trefwoord..." class="forminput forminput--full"></label>	
+						<button type="submit" id="btnSearch">filter</button>
+					</p>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<main class="container">
+		<section class="main__sheet">
+			<div class="main__large">
+				<div id="large__figure">
+					<img src="img/photo1.jpg" alt="stad nabij Petra, Jordanië">
+					<div class="large__title">stad nabij Petra, Jordanië</div>
+					<ul class="large__controls">
+						<li><a href="" id="lnkFirst" title="ga naar eerste slide"><i class="fas fa-fast-backward"></i></a></li>
+						<li><a href="" id="lnkPrev" title="ga naar vorige slide"><i class="fas fa-step-backward"></i></a></li>
+						<li><a href="" id="lnkPlay" title="start slideshow"><i class="fas fa-play-circle"></i></a></li>
+						<li><a href="" id="lnkNext" title="ga naar volgende slide"><i class="fas fa-step-forward"></i></a></li>
+						<li><a href="" id="lnkLast" title="ga naar laatste slide"><i class="fas fa-fast-forward"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="main__thumbs">
+				<figure data-albumId="1" data-year="2018" class="active">
+					<a href="img/photo1.jpg"><img src="img/photo1.thn.jpg" alt="stad nabij Petra, Jordanië (2018)"></a>
+				</figure>
+				<figure data-albumId="1" data-year="2018">
+					<a href="img/photo2.jpg"><img src="img/photo2.thn.jpg" alt="Wadi Rum, Jordanië"></a>
+				</figure>
+				<figure data-albumId="2" data-year="2018">
+					<a href="img/photo3.jpg"><img src="img/photo3.thn.jpg" alt="Ait Ben Haddou, Marokko"></a>
+				</figure>
+				<figure data-albumId="2" data-year="2018">
+					<a href="img/photo4.jpg"><img src="img/photo4.thn.jpg" alt="Guest house, Marokko"></a>
+				</figure>
+				<figure data-albumId="3" data-year="2016">
+					<a href="img/photo5.jpg"><img src="img/photo5.thn.jpg" alt="Zomaar een stoel ergens in Iran"></a>
+				</figure>
+				<figure data-albumId="3" data-year="2016">
+					<a href="img/photo6.jpg"><img src="img/photo6.thn.jpg" alt="Mozaïek, Iran"></a>
+				</figure>
+				<figure data-albumId="3" data-year="2016">
+					<a href="img/photo7.jpg"><img src="img/photo7.thn.jpg" alt="Iraanse vrouw speelt badminton"></a>
+				</figure>
+				<figure data-albumId="4" data-year="2017">
+					<a href="img/photo8.jpg"><img src="img/photo8.thn.jpg" alt="Transport in Bangkok"></a>
+				</figure>
+				<figure data-albumId="4" data-year="2017">
+					<a href="img/photo9.jpg"><img src="img/photo9.thn.jpg" alt="Bangkok skyline"></a>
+				</figure>
+				<figure data-albumId="4" data-year="2017">
+					<a href="img/photo10.jpg"><img src="img/photo10.thn.jpg" alt="Eetstalletjes, Thailand"></a>
+				</figure>
+				<figure data-albumId="4" data-year="2017">
+					<a href="img/photo11.jpg"><img src="img/photo11.thn.jpg" alt="Een liggende Boeddha, Thailand "></a>
+				</figure>
+				<figure data-albumId="5" data-year="2016">
+					<a href="img/photo12.jpg"><img src="img/photo12.thn.jpg" alt="De mooie Wadi Shab, Oman"></a>
+				</figure>
+				<figure data-albumId="5" data-year="2016">
+					<a href="img/photo13.jpg"><img src="img/photo13.thn.jpg" alt="Muscat, Oman"></a>
+				</figure>
+				<figure data-albumId="5" data-year="2016">
+					<a href="img/photo14.jpg"><img src="img/photo14.thn.jpg" alt="Wahiba sands, Oman"></a>
+				</figure>
+				<figure data-albumId="5" data-year="2016">
+					<a href="img/photo15.jpg"><img src="img/photo15.thn.jpg" alt="Wegwijzer, Oman"></a>
+				</figure>
+				<figure data-albumId="5" data-year="2016">
+					<a href="img/photo16.jpg"><img src="img/photo16.thn.jpg" alt="Antieke graven, Oman"></a>
+				</figure>
+				<figure data-albumId="6" data-year="2018">
+					<a href="img/photo17.jpg"><img src="img/photo17.thn.jpg" alt="Noorderlicht, Lapland"></a>
+				</figure>
+				<figure data-albumId="6" data-year="2018">
+					<a href="img/photo18.jpg"><img src="img/photo18.thn.jpg" alt="Onderwerg, Lapland"></a>
+				</figure>
+				<figure data-albumId="6" data-year="2018">
+					<a href="img/photo19.jpg"><img src="img/photo19.thn.jpg" alt="Akaslompolo, Finland"></a>
+				</figure>
+				<figure data-albumId="6" data-year="2018">
+					<a href="img/photo20.jpg"><img src="img/photo20.thn.jpg" alt="Bevroren bomen, Finland"></a>
+				</figure>
+				<figure data-albumId="7" data-year="2017">
+					<a href="img/photo21.jpg"><img src="img/photo21.thn.jpg" alt="Grote zandduinen nabij Djanet, Algerije"></a>
+				</figure>
+				<figure data-albumId="7" data-year="2017">
+					<a href="img/photo22.jpg"><img src="img/photo22.thn.jpg" alt="Duizenden jaren oude rotstekeningen, Algerije"></a>
+				</figure>
+				<figure data-albumId="7" data-year="2017">
+					<a href="img/photo23.jpg"><img src="img/photo23.thn.jpg" alt="Zandsculpturen, Algerije"></a>
+				</figure>
+				<figure data-albumId="7" data-year="2017">
+					<a href="img/photo24.jpg"><img src="img/photo24.thn.jpg" alt="Vreemde paddenstoelvormen, Algerije"></a>
+				</figure>
+				<figure data-albumId="7" data-year="2017">
+					<a href="img/photo25.jpg"><img src="img/photo25.thn.jpg" alt="Oase, Algerije"></a>
+				</figure>
+			</div>
+		</section>
+
+	</main>
+	<script src="javascript.js"></script>
+</body>
+</html>

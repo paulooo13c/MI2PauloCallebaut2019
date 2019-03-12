@@ -1,0 +1,326 @@
+/*
+ * Common styles
+ *
+ * @author Rogier van der Linde <rogier.vanderlinde@odisee.be>
+ */
+
+/* ===========================================
+    Generic
+    =========================================== */
+
+/* reset */
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background-color: #f0f0f0;
+    color: #4F4F4F;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-size: 1.4rem;
+}
+
+/* general */
+
+.container {
+    margin: 0 auto;
+    max-width: 100rem;
+    width: 70%;
+}
+
+/* ===========================================
+    Header
+    =========================================== */
+
+/* general */
+
+.page__header {
+    align-items: center;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* logo */
+
+.header__logo a {
+    display: block;
+    margin-top: 0.8em;
+    text-decoration: none;
+}
+
+.header__logo a h1 {
+    color: #4F4F4F;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 2.7em;
+    font-weight: 300;
+}
+
+.header__logo p {
+    color: #7c7c7c;
+    font-size: 0.9em;
+    margin-top: -0.4em;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+/* login modal */
+
+#loginmodal {
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 0 0 0.3em rgba(0,0,0,0.03) inset, 0 0 0 0.1em rgba(0,0,0,0.15);
+    max-width: 100%;
+    padding: 2rem 2rem;
+    position: absolute;
+    right: 10px;
+    top: -5px;
+    width: 45rem;
+    transition: 0.5s;
+}
+
+.loginmodal--verborgen {
+    transform:translateY(-100%);
+}
+
+.modal__title {
+    color: #0097A7;
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin: 1rem 0 2rem 0;
+}
+
+/* ===========================================
+    Filters
+    =========================================== */
+
+.page__filters {
+    background-color: #00BCD4;
+    margin: 2em auto;
+    padding: 1rem 0;
+}
+
+.page__filters label {
+    color: #4F4F4F;
+}
+
+.filters__form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filters__form .filters__group {
+    align-items: center;
+    border: none;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.filters__group:first-child p + p {
+    margin-left: 2rem;
+}
+
+.filters__years {
+    display: flex;
+}
+
+.filters__form button {
+    cursor: pointer;
+    font-size: 1.4rem;
+    height: 3rem;
+    margin: 0.5rem 0;
+    padding: 0 0.5rem; 
+    text-transform: uppercase;
+}
+
+.filters__years label {
+    align-items: center;
+    display: flex;
+    margin-right: 0.5rem;
+}
+
+.filters__form input[type=checkbox] {
+    margin-right: 0.5rem;
+}
+
+.filters__years input[type=checkbox] {
+    margin-left: 0.5rem;
+}
+
+/* ===========================================
+    Content
+    =========================================== */
+
+/* general */
+
+main {
+    margin-bottom: 3em;
+    margin-top: 1em;
+}
+
+.main__sheet {
+    background: #fff;
+    box-shadow: 0 0 0 0.3em rgba(0,0,0,0.03) inset, 0 0 0 0.1em rgba(0,0,0,0.15);
+    padding: 2rem;
+}
+
+/* large image */
+
+.main__large, 
+.main__thumbs {
+    margin: 0 auto;
+    max-width: 80rem;
+}
+
+#large__figure {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 4rem;
+}
+
+.large__controls {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 1rem 0;
+    width: 15rem;
+}
+
+.large__controls li {
+    margin: 0 0.5rem;
+}
+
+.large__controls i {
+    color: #4F4F4F;
+}
+
+.large__title {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 1rem 0;
+    width: calc(100% - 15rem);
+}
+
+/* thumbs */
+
+.main__thumbs {
+    display: grid;
+    grid-column-gap: 2.5%;
+    grid-row-gap: 1rem;
+    grid-template-columns: 18% 18% 18% 18% 18%; /* four columns */
+    grid-template-rows: auto; 
+}
+
+/* ===========================================
+    Form styles
+    =========================================== */
+
+/* general */
+
+form p {
+    margin: 1em 0;
+}
+
+label {
+    color: #9e9e9e;
+}
+
+/* buttons */
+
+.button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.3rem;
+    height: 3.6rem;
+    letter-spacing: .5px;
+    line-height: 3.6rem;
+    padding: 0 1.6rem;
+    transition: .3s ease-out;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+/* buttons, full */
+
+.button--full {
+    background-color: rgba(255, 64, 129, 1);
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 
+        0 3px 1px -2px rgba(0, 0, 0, 0.12), 
+        0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.button--full:hover, 
+.button--full:focus, 
+.button--full.active {
+    background-color: rgba(255, 64, 129, 0.8);
+}
+
+/* buttons, light */
+
+.button--light {
+    color: #0097A7;
+}
+
+.button--light:hover, 
+.button--light:focus, 
+.button--light.active {
+    color: #FF4081;
+}
+
+/* form inputs */
+
+.forminput {
+    font-size: 1.4rem;
+    height: 3rem;
+    margin: 0.5rem 0;
+    padding: 0 0.5rem; 
+}
+
+.forminput::placeholder {
+    color: #ccc;
+}
+
+/* form inputs, full */
+
+.forminput--full {
+    border: 2px solid #eee; 
+    border-radius: 2px;  
+}
+
+.forminput--light {
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 1.6rem;
+    margin: 0 0 1rem 0;
+    padding: 0;
+    transition: box-shadow .3s, border .3s;
+}
+
+/* form messages */
+
+.formerror {
+    font-style: italic;
+    color: #900;
+}
