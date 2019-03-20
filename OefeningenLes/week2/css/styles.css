@@ -189,6 +189,10 @@ main {
     flex-flow: row wrap;
     margin-bottom: 4rem;
 }
+/* // hover effect */
+figure:hover{
+    box-shadow: 0 0 11px red; 
+}
 
 .large__controls {
     display: flex;
