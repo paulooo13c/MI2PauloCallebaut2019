@@ -27,7 +27,10 @@
 	<img src="//bitmatters.be/o/img/photo6-m.jpg" alt="" id="imgBig">
 	<p class="title">foto 1: stad nabij Petra</p>
 	<p><button id="btnNext">volgende</button></p>
-			
+	<p><button id="btnEerst">eerste</button></p>
+	<p><button id="btnLaatst">laatst</button></p>
+	<p><button id="btnVorige">vorige</button></p>
+
 	<script>
 		let photos = [
 			{ url: '//bitmatters.be/o/img/photo1-m.jpg', title: 'stad nabij Petra'},
@@ -37,7 +40,33 @@
 			{ url: '//bitmatters.be/o/img/photo3-m.jpg', title: 'Ait Ben Haddou, Marokko'},
 			{ url: '//bitmatters.be/o/img/photo20-m.jpg', title: 'Bevroren bomen, Finland'}
 		];
-		// your code here...
+		window.addEventListener("load", function(){
+			let index=0;
+			// BTN NEXT
+			document.getElementById("btnNext").addEventListener("click", function(){
+				if	(index === 5){
+					index = 0;
+					document.getElementById("imgBig").src = photos[index].url;
+				}
+				index++;
+				document.getElementById("imgBig").src = photos[index].url;
+			})
+
+			// BTN eerst
+			document.getElementById("btnEerst").addEventListener("click", function(){
+				document.getElementById("imgBig").src = photos[0].url;
+			})
+
+			// BTN laatst
+			document.getElementById("btnLaatst").addEventListener("click", function(){
+				document.getElementById("imgBig").src = photos[5].url;
+			})
+
+			// BTN Vorige
+			document.getElementById("btnVorige").addEventListener("click", function(){
+				document.getElementById("imgBig").src = photos[index-1].url;
+			})
+		})
 	</script>
 </body>
 </html>

@@ -24,7 +24,7 @@
 		</ol>
 	</div>
 	<img src="//bitmatters.be/o/img/photo1-m.jpg" alt="" id="imgBig">
-	<p>stad nabij Petra</p>
+	<p id="smalltitle">stad nabij Petra</p>
 	<p><button id="btnRandom">genereer random foto</button></p>
 			
 	<script>
@@ -36,7 +36,18 @@
 			{ url: '//bitmatters.be/o/img/photo3-m.jpg', title: 'Ait Ben Haddou, Marokko'},
 			{ url: '//bitmatters.be/o/img/photo20-m.jpg', title: 'Bevroren bomen, Finland'}
 		];
-		// your code here...
+		//let foto = document.getElementById("imgBig").src;
+		// fotos lade niet altijd op tijd.
+		window.addEventListener("load", function(){
+			document.getElementById("btnRandom").addEventListener("click",function(){
+				console.log("btn werkt");
+				// console.log(foto);
+				let nieuweFoto = Math.floor(Math.random( )* photos.length);
+				let description = document.getElementById("smalltitle");
+				document.getElementById("imgBig").src = photos[nieuweFoto].url;
+				description.innerHTML = photos[nieuweFoto].title;
+			})
+		})
 	</script>
 </body>
 </html>
