@@ -27,7 +27,16 @@
 	</ul>
 	<p>Aangeklikte link: <span id="msg"></span></p>
 	<script>
-		// your code here...
+		window.addEventListener("load", function(){
+			let list = document.querySelectorAll('.assignment>li');
+			for (let i = 0; i < list.length; i++) {
+            let list = list[i];
+            let link = list.querySelector('a');
+		 link.addEventListener("click", function(e){
+			 e.preventDefault();
+		 })	
+		}
+		});
 	</script>
 </body>
 </html>

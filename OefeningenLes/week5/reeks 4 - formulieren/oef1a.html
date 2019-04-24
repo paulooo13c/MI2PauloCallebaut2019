@@ -67,7 +67,17 @@
 		<p id="pStyles">Stijlen: <span>(geen geselecteerd)</span></p>
 	</div>
 	<script>
-		// your code here...
+		window.addEventListener("load",function(){
+			let fields = document.querySelectorAll("input");
+			let btn = document.getElementById("btnClear");
+			
+			btn.addEventListener("click", function(){
+				for (let ii = 0; ii < fields.length; ii++) {
+				
+					console.log("btn werkt");
+				}
+			})
+		})
 	</script>
 </body>
 </html>

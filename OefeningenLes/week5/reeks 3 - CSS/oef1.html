@@ -37,7 +37,14 @@
 	</div>
 	<p id="text">Af producten ze opbrengst op denkbeeld te. Ongebruikt wie losgemaakt zee was ingezameld een. Rijen te heele dient op moest in in komen. Federatie gesteente al na daaronder. Zes bezorgden men ter verkoopen leeningen gewijzigd. Nu apen hier ik daad en dank. </p>
 	<script>
-		// your code here...
+		window.addEventListener("load",function(){
+			let slider = document.getElementById('rngSize');
+			let text = document.getElementById('text');
+
+			slider.addEventListener('change', function(){
+				text.css("font-size",(slider.value+"p"));
+			})
+		});
 	</script>
 </body>
 </html>

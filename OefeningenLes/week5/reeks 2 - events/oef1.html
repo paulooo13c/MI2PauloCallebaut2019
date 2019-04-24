@@ -25,7 +25,19 @@
 	<p><input id="inpIn"></p>
 	<p id="msgTyped" class="message">aantal karakters: <span>0</span></p>
 	<script>
-		// your code here...
+	window.addEventListener("load", function(){
+		let input = document.getElementById("inpIn");
+		document.getElementById("inpIn").addEventListener("keydown", function(event){
+			if (event.keyCode === 13)
+			{
+				console.log("enter is clicked");
+				input.value = "";
+			} 
+			else{
+				document.querySelector(".message span") = input.value;
+				console.log("not enter")};
+		});
+	});
 	</script>
 </body>
 </html>

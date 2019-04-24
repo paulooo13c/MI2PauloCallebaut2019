@@ -27,7 +27,19 @@
 	<p><input type="button" value="reset" id="btnReset"></p>
 			
 	<script>
-		// your code here...
+		window.addEventListener("load",function(){
+			let slider = document.getElementById('rng1');
+			let waarde = document.getElementById('num');
+			let knop = document.getElementById('btnReset');
+			slider.addEventListener("input", function(){
+						waarde.innerHTML = slider.value ;
+			})
+
+			knop.addEventListener("click", function(){
+				slider.value = 5;
+				waarde.innerHTML = slider.value ;
+			})
+		})
 	</script>
 </body>
 </html>

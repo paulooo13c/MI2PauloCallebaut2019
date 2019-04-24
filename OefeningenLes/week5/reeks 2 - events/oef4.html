@@ -32,7 +32,18 @@
 	</form>
 	<p>Login/paswoord combinatie: <span id="msg"></span></p>
 	<script>
-		// your code here...
+		window.addEventListener("load", function(){
+			let btn = document.getElementById("btnLogin");
+			let combinatie = document.getElementById("msg");
+			let input1 = document.getElementById("inpEmail");
+			let input2 = document.getElementById("inpPassword");
+
+			btn.addEventListener("click",function(e){
+				e.preventDefault();
+				combinatie.innerHTML = input1.value +(" ")+ input2.value;
+			})
+
+		})
 	</script>
 </body>
 </html>

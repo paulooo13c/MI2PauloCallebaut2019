@@ -31,7 +31,25 @@
 			'//bitmatters.be/o/img/photo3-m.jpg',
 			'//bitmatters.be/o/img/photo20-m.jpg'
 		];
-		// your code here...
+		
+
+		window.addEventListener("load",function(){
+			let counter = 0;
+			document.getElementById("imgBig").src = photos[counter];
+			//document.getElementById("imgBig").addEventListener("keydown", function(event){
+			window.addEventListener("keydown", function(event){
+			if (event.keyCode == 37)
+			{
+				counter-1;
+			} 
+			else if(event.keyCode == 39){
+				counter++;
+				}
+			else{
+				console.log("geen 1 van de 2")
+			}
+		})
+	});
 	</script>
 </body>
 </html>
