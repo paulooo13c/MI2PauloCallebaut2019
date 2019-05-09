@@ -16,7 +16,7 @@
       console.log('status: ', data.status);
       console.log(data.statusText);
       //kolom1.textContent = data[1 , title];
-      console.log("data1= " ,data[1].title, data[1].nameWithoutThePrefix);  
+      console.log("data1= " ,data[1].title, data[1].artists);  
       kolom1.innerHTML = data[1].title;
     }
   // function showText(responseAsText){
