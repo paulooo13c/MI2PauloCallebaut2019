@@ -19,7 +19,18 @@ h1 {
   margin-right: auto;
 }
 /* PICTOGRAMMEN */
-#dummy {
+#pictogram {
+  background-color: white;
+  margin: 50px;
+  height: 10%;
+  width: 8%;
+  border-radius: 35px;
+  margin-left: 75px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#pictogram2 {
   background-color: white;
   margin: 50px;
   height: 10%;
@@ -36,6 +47,7 @@ h1 {
   color: green;
 }
 
+/* Eventueel met classlists beginnen werken om het uiterlijk van de kaarten te laten veranderen als dit overzichtelijker is */
 .achterkant {
   background-color: green;
   margin: 50px;
