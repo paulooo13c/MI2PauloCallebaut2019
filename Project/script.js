@@ -29,23 +29,20 @@
 
     let isEerstePictogram = false;
     for (let i = 0; i < mijnArray.length; i++) {
-      mijnArray[i].addEventListener("click", function () {
+      mijnArray[i].addEventListener('click', function () {
         mijnArray[i].classList.add('klik');
         arrayAfbeeldingen[i].classList.remove('hidden');
         if (!isEerstePictogram) {
           isEerstePictogram = true;
           open.push(mijnArray[i]);
           open.push(arrayAfbeeldingen[i]);
-          console.log(open[0])
         }
         else {
           isEerstePictogram = false;
           open.push(mijnArray[i]);
           open.push(arrayAfbeeldingen[i]);
-          console.log(open[1]);
           setTimeout(vergelijken, 500);
         }
-        console.log("KlikFunctie werkt.");
       })
     }
 
@@ -53,7 +50,6 @@
 
     function vergelijken() {
       if (open[0].id === open[2].id) {
-        console.log("waarden zijn gelijk");
         aantalJuist++;
         open.length = 0;
         score++
@@ -63,7 +59,6 @@
         }
       }
       else {
-        console.log("waarden zijn niet gelijk")
         open[0].classList.remove('klik');
         open[1].classList.add('hidden');
         open[2].classList.remove('klik')
