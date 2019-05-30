@@ -3,9 +3,37 @@ body {
   background-color: lightgray;
 }
 
-h1 {
+h1,h2 {
   text-align: center;
   color: red;
+}
+
+.menu{
+  height: 50vh;
+  width: 25vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: grey;
+  border-radius: 35px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: orange;
+  border: none;
+  border-radius: 10px;
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+
+.button:hover{
+  background-color: red;
 }
 
 .container {
