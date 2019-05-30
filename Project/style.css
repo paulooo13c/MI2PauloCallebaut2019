@@ -1,5 +1,6 @@
 body {
   font: comic sans MS;
+  background-color: lightgray;
 }
 
 h1 {
@@ -31,16 +32,29 @@ h1 {
   width: 20%;
   margin: 25px;
   box-sizing: border-box;
-  text-align: center;
+  align-items: center;
+  position: relative;
+  border-radius: 5px;
 }
 
 /* Classlists voor klassepictogram */
 .klassepictogram.klik{
   transform:  rotateY(180deg);
   transition-duration: 0.5s;
-  background-color: red;
+  background-color:grey;
+  image-resolution: 0;
+  
 }
 
+/* Images */
+.hidden{
+  display: none;
+}
+
+img{
+  height: 100%;
+  width: 100%;
+}
 
 /* Media queries */
 @media screen and (max-width: 1800px )
