@@ -11,16 +11,11 @@
     let afbeelding = document.getElementsByClassName('hidden');
     const arrayAfbeeldingen = [...afbeelding];
 
+    // Een array waar ik de geklikte objecten insteek.
     const open = [];
 
+    // Een boolean die ik gebruik om het eerste en tweede geklikte object te onderscheiden.
     let isEerstePictogram = false;
-
-    let klik1;
-    let klik2;
-    let afbeelding1;
-    let afbeelding2;
-
-    let geklikedArray = [klik1, klik2, afbeelding1, afbeelding2];
 
     for (let i = 0; i < mijnArray.length; i++) {
       mijnArray[i].addEventListener("click", function () {
@@ -37,14 +32,17 @@
           open.push(mijnArray[i]);
           open.push(arrayAfbeeldingen[i]);
           console.log(open[1]);
-          setTimeout(vergelijken, 500);
+          setTimeout(vergelijken, 250);
         }
         console.log("KlikFunctie werkt.");
       })
     }
 
-    // Deze functie zal de waarden van beiden vergelijken 
+    // Deze functie zal de waarden van Vergelijken.
+    // In dit geval gaat hij de id van het object er uit nemen.
+
     let aantalJuist = 0;
+
     function vergelijken() {
       if (open[0].id === open[2].id) {
         console.log("waarden zijn gelijk");
@@ -60,12 +58,18 @@
         open[1].classList.add('hidden');
         open[2].classList.remove('klik')
         open[3].classList.add('hidden')
+        Buzzer();
         open.length = 0;
       }
+    }
+    function Buzzer(){
+      var audio = new Audio('sounds/Wrong Buzzer.wav');
+      audio.play();
     }
 
     function einde() {
       alert("Proficiat je hebt ze allemaal gevonden ! ")
+      var credits = new Audio()
     }
   });
 
