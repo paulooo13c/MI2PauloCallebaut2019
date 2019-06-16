@@ -1,4 +1,4 @@
-è<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Reeks 1 oef3a</title>
@@ -34,15 +34,17 @@
 			'//bitmatters.be/o/img/photo3-m.jpg',
 			'//bitmatters.be/o/img/photo20-m.jpg'
 		];
-		//let foto = document.getElementById("imgBig").src;
-		window.addEventListener("load", function(){
-			document.getElementById("btnRandom").addEventListener("click",function(){
-				console.log("btn werkt")
-				// console.log(foto);
-				let nieuweFoto = Math.floor(Math.random( )* photos.length);
-				document.getElementById("imgBig").src = photos[nieuweFoto];
-			})
-		})
+		window.addEventListener('load', function(){
+		
+			document.getElementById('btnRandom').addEventListener('click', function(){
+
+ 				var x = Math.floor((Math.random() * 5	) + 1);
+				document.getElementById('imgBig').src = photos[x]; 
+				console.log(x);
+
+			});
+
+		});
 	</script>
 </body>
 </html>

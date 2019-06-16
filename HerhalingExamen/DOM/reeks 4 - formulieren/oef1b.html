@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reeks 4 oef1b</title>
+	<meta charset="utf-8" />
+	<style>
+		/* general styles */
+		body { font-family: Arial; font-size: 14px; max-width: 600px; }
+		* { box-sizing: border-box; }
+		.assignment { margin-bottom: 20px; color: #4F81BD; }
+		.assignment ul, .assignment ol { padding-left: 15px; }
+		/* specific styles */
+		button, input[type=button] { border: 1px solid; background-color: #ccc; cursor: pointer } 
+		button:hover, input[type=button]:hover { background-color: #ddd; } 
+		button { margin: 20px 0}
+		.filters { max-width: 300px; }
+		.label { margin: 0; }
+		input[type=text], input[type=email] { width: 100%; }
+		input[type=text], input[type=email], select, .radiolist { display: block;  margin: 5px 0 15px 0; }
+		.categories { display: flex; }
+		.categories label { margin-right: 15px; }
+		.styles label { display: block; }
+		.summary p { margin: 0; }
+	</style>
+</head>
+<body>
+	<div class="assignment">
+		<p>Opdracht (<a href="//bitmatters.be/o/ss/reeks4-2.webp">voorbeeld</a>)</p>
+		<ol>
+			<li>toon bij klikken op de 'instellen' knop een samenvatting van de ingestelde waarden (maak gebruik van het submit event van het formulier)</li>
+		</ol>
+	</div>
+	<form id="frm1" class="filters">
+		<h3>Filters</h3>
+		<label for="inpSearch">Trefwoord</label>
+		<input type="text" id="inpSearch">
+		<label for="selType">Type</label>
+		<select id="selType">
+			<option value="-1">selecteer...</option>
+			<option value="sch">schoenen</option>
+			<option value="kld">kledij</option>
+			<option value="acc">accessoires</option>
+		</select>
+		<p class="label">Categorie</p>
+		<div class="radiolist categories">
+			<label><input type="radio" name="category" value="mannen"> mannen</label>
+			<label><input type="radio" name="category" value="vrouwen"> vrouwen</label>
+			<label><input type="radio" name="category" value="kinderen"> kinderen</label>
+		</div>
+		<p class="label">Stijl</p>
+		<div class="checkboxlist styles">
+			<label><input type="checkbox" value="gekleed"> gekleed</label>
+			<label><input type="checkbox" value="casual"> casual</label>
+			<label><input type="checkbox" value="urban"> urban</label>
+			<label><input type="checkbox" value="retro"> retro</label>
+			<label><input type="checkbox" value="klassiek"> klassiek</label>
+		</div>
+		<button type="submit" id="btnFilter">instellen</button>
+		<button type="reset" id="btnClear">wissen</button>
+	</form>
+	<div class="summary">
+		<h3>Overzicht filterinstellingen</h3>
+		<p id="pSearch">Zoekterm: <span>(leeg)</span></p>
+		<p id="pType">Type: <span>(geen gekozen)</span></p>
+		<p id="pCategory">Categorie: <span>(geen geselecteerd)</span></p>
+		<p id="pStyles">Stijlen: <span>(geen geselecteerd)</span></p>
+	</div>
+	<script>
+		// your code here...
+	</script>
+</body>
+</html>

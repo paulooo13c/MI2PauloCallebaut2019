@@ -27,7 +27,8 @@
     document.getElementById("btnSearch").addEventListener("click",function(e){
         e.preventDefault();
         let naam = document.getElementById("artist").value;
-        let url = 'https://www.songsterr.com/a/ra/songs/byartists.json?artists='+naam;
+        let url = 'https://www.songsterr.com/a/ra/songs/byartists.json?artists=';
+        url += naam;
 
         fetch(url)
         .then(handleResponse)

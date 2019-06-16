@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Fetch - JSON</title>
+    <meta name="description" content="Een oefening op fetch" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Fetch &amp; JSON oefening</h1>
+    </header>
+
+    <form id="frmSearch">
+        <p>
+            <label for="artist">Artiest </label>
+            <input type="text" id="artist" placeholder="Artiest of groepsnaam">
+        </p>
+        <p>
+            <label for="song">Nummer </label>
+            <input type="text" id="song" placeholder="Artiest of groepsnaam">
+        </p>
+        <button id="btnSearch">Zoek Partituren</button>
+    </form>
+
+    <table id="songs">
+        <thead>
+            <tr>
+                <th id="titel">Titel</th>
+                <th id="partituur">Partituur types</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div id="tooltip" class="hidden">Test</div>
+</body>
+<script src="js/script.js"></script>
+
+</html>
