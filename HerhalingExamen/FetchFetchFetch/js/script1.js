@@ -11,6 +11,8 @@
 		return resp.json();
 	}
 	const dataArray = [];
+	
+
 	function handleSuccess(data) {
 		console.log('data received: ', data);
 
@@ -28,10 +30,11 @@
 		Klick();
 	}
 
+
 		function Klick (){
 			let tabeldata=  document.getElementsByClassName("Data")
 			const mijnArray = [...tabeldata];
-		for(let i = 0; i<mijnArray.length; i++)
+		for(let i = 0; i < mijnArray.length; i++)
 		{
 			mijnArray[i].addEventListener('click',function(){
 				console.log(mijnArray[i].innerText);
